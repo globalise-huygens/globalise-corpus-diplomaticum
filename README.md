@@ -55,4 +55,8 @@ for prefix in $prefixes; do
 done
 ```
 
+### Notes on use
+* contains sections in modern and old Dutch that may be difficult to separate (the modern sections are predominantly the indented introductions to the treaties)
+* contains footnotes
+
  
