@@ -42,5 +42,17 @@ for f in images/*.ppm; do
 done
 ```
 
+### Sort files into folders
+```bash
+sourcedir="txt/"
+prefixes=$(find "$sourcedir" -type f -name "*.txt" -exec basename {} \; | awk -F '-' '{print $1}' | sort -u)
+
+for prefix in $prefixes; do
+    folder_path="$sourcedir/$prefix"
+    mkdir -p "$folder_path"
+
+    mv "$sourcedir/$prefix"* "$folder_path/"
+done
+```
 
  
